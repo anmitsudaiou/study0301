@@ -15,17 +15,6 @@
 
     const result = Math.min(...num)
     console.log(result);
-    
-    //1行目の入力値に関する処理
-    // const calc = lines[0].split(' ')
-    // const a = Number(calc[0])
-    // const b = Number(calc[1])
-    // if(a >= 0 && a <= 100){
-    //     if(b >= 0 && b <= 100){
-    //         let result = a + b
-    //         console.log(result);
-    //     }
-    // }
     console.log('');
 }
 
