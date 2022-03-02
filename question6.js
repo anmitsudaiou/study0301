@@ -12,7 +12,7 @@
     const chair = new Array(n)
     // console.log(chair.length);
     for(let i = 0;i < chair.length;i++){
-        chair[i] = true
+        chair[i] = 1
     }
     // console.log(chair[3])
 
@@ -22,10 +22,11 @@
         let b = Number(groupInfo[1])
         for(let num = 1;num <= a;num++){
             if(chair[b - 1]){
-                chair[b - 1] = false
+                chair[b - 1] = 0
                 answer++
             }else{
-                answer -= num - 1
+                num -= 1
+                answer -= num 
                 break
             }
             b++
