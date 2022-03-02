@@ -4,30 +4,37 @@
  */
  const main = () => {
     
-    let answer;
-    const customerInfo = lines[0].split('')
+    let answer = 0
+    const customerInfo = lines[0].split(' ')
     const n = Number(customerInfo[0])
     const m = Number(customerInfo[1])
+    // console.log(m);
     const chair = new Array(n)
+    // console.log(chair.length);
+    for(let i = 0;i < chair.length;i++){
+        chair[i] = true
+    }
+    // console.log(chair[3])
 
     for(let i = 0;i < m;i++){
-        const groupInfo = lines[i+1].split('')
-        const a = Number(groupInfo[0])
-        const b = Number(groupInfo[1])
-        for(let num = 0;num < a;num++){
-            if(chair[b-1]){
-                chair[b-1] = false
+        const groupInfo = lines[i+1].split(' ')
+        let a = Number(groupInfo[0])
+        let b = Number(groupInfo[1])
+        for(let num = 1;num <= a;num++){
+            if(chair[b - 1]){
+                chair[b - 1] = false
                 answer++
+            }else{
+                answer -= num - 1
+                break
+            }
+            b++
+            if(b > n){
+                b = 1
             }
         }
     }
-
-
-    // console.log(chair);
- 
-    // for(let num = 0;num < countOfGroup;num++){
-    //     for(let people = 0;)
-    // }
+    console.log(answer);
     console.log('');
 }
 
