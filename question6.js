@@ -8,14 +8,10 @@
     const customerInfo = lines[0].split(' ')
     const n = Number(customerInfo[0])
     const m = Number(customerInfo[1])
-    // console.log(m);
     const chair = new Array(n)
-    // console.log(chair.length);
     for(let i = 0;i < chair.length;i++){
         chair[i] = 1
     }
-    // console.log(chair[3])
-
     for(let i = 0;i < m;i++){
         const groupInfo = lines[i+1].split(' ')
         let a = Number(groupInfo[0])
