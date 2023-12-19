@@ -31,6 +31,7 @@ const main = () => {
  */
 const reader = require("readline");
 
+console.log("bbbbbbbb");
 process.stdin.resume();
 process.stdin.setEncoding("utf8");
 const rl = reader.createInterface({
