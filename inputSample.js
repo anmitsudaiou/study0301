@@ -16,30 +16,32 @@ hello = 3 , world = 4
  *  メイン処理
  *  lines: Array<string> 入力された行(末尾は必ず改行)分の配列
  */
+console.log("aaa");
 const main = () => {
-    const N = lines[0]
-    for(let i = 0; i < N; i++) {
-        const line = lines[i+1].split(' ')
-        console.log('hello = ' + line[0] + ', world = ' + line[1])
-    }
-    console.log('');
-}
+  const N = lines[0];
+  for (let i = 0; i < N; i++) {
+    const line = lines[i + 1].split(" ");
+    console.log("hello = " + line[0] + ", world = " + line[1]);
+  }
+  console.log("");
+};
 
 /**
  * 標準入出力のための処理
  */
-const reader = require('readline')
+const reader = require("readline");
 
-process.stdin.resume()
-process.stdin.setEncoding('utf8')
+console.log("bbbbbbbb");
+process.stdin.resume();
+process.stdin.setEncoding("utf8");
 const rl = reader.createInterface({
-    input: process.stdin,
-    output: process.stdout
-})
+  input: process.stdin,
+  output: process.stdout,
+});
 
-let lines = []
-rl.on('line', (line) => {
-    lines.push(line)
-})
+let lines = [];
+rl.on("line", (line) => {
+  lines.push(line);
+});
 
-rl.on('close', main)
+rl.on("close", main);
